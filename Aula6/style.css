@@ -1,0 +1,61 @@
+body{
+    background-color: black;
+}
+.divFundo{
+    background-color: brown;
+    margin: 20px;
+    padding: 3px;
+}
+h1{
+    color: ghostwhite;
+    text-align: center;
+    font-size: 60px;
+    font-family: Algerian;
+    font-style: italic;
+    text-shadow: black 2.5px 2.5px 2.5px;
+}
+.h1_2{
+    margin: 150px;
+    color: black;
+    text-align: center;
+    font-size: 60px;
+    font-family: Algerian;
+    font-style: italic;
+    text-shadow: white 1px 1px 1px;
+}
+.h2_2{
+    color: maroon;
+}
+.img1{
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    background-color: white;
+    margin-right: 400px;
+    margin-left: 400px;
+    border: black solid;
+    box-shadow: black 2px 2px 2px;
+}
+.img2{
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    background-color: white;
+    margin-right: 400px;
+    margin-left: 400px;
+    border: black solid;
+    box-shadow: black 2px 2px 2px;
+}
+.img3{
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    background-color: white;
+    margin-right: 400px;
+    margin-left: 400px;
+    border: black solid;
+    box-shadow: black 2px 2px 2px;
+}

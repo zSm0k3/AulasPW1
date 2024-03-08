@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="icon" href="ain.png">
+    <title>Script</title>
+
+    <script>
+        function imprimirConteudo(){
+            document.getElementById('conteudo').innerHTML = 'Oba deu certo!';
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <p id="msg">Bem-vindo!</p>
+
+        <button type="button" onclick="document.getElementById('msg').innerHTML = 'Muito Bom!'">Clique Aqui</button>
+
+        <button type="button" onclick="document.getElementById('msg').innerHTML = Date()">Exemplo Data</button><br>
+
+        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+        <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+        <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+        <h1>Teste de funções utilizando JS</h1>
+
+        <p id="conteudo">Conteudo</p>
+
+        <button type="button" onclick="imprimirConteudo()">Clicar</button>
+    </div>
+    
+</body>
+</html>

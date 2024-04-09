@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+<body>
+    <h2>Triângulo isoscéles, escaleno ou equilatero </h2>
+    <br>
+    <label>Lado A:</label>
+    <input type="number" id="a">
+    <br><br>
+    <label>Lado B: </label>
+    <input type="number" id="b">
+    <br><br>
+    <label>Lado C: </label>
+    <input type="number" id="c">
+    <br><br>
+    <button onclick="calcular()">Calcular</button>
+    <p id="Resultado"></p>
+
+    <img id="img" width="500px" height="300px">
+
+</body>
+<script>
+    function calcular(){
+        var a = parseFloat(document.getElementById("a").value);
+        var b = parseFloat(document.getElementById("b").value);
+        var c = parseFloat(document.getElementById("c").value);
+        var img = document.getElementById("img");
+    
+        if(a == b && b == c){
+            document.getElementById("Resultado").innerHTML="Triângulo Equilatero";
+            img.src = "a.png";
+        }
+        else if(a == b && b != c || a != b && b == c || b == c && c != a){
+            document.getElementById("Resultado").innerHTML="Triângulo Isoscéles";
+            img.src = "c.png";
+        }
+        else if(a != b && b !=c){
+            document.getElementById("Resultado").innerHTML="Triângulo Escaleno";
+            img.src = "b.png";
+        };
+
+}
+
+</script>
+</html

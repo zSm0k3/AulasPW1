@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+</head>
+<body>
+    <h2>Jogo de Adivinhação</h2>
+    <p>Eu escolhi um número entre 0 e 100, agora é com você!! Qual eu escolhi? kkkk</p>
+
+    <input type="number" id="palpite">
+    <button onclick="verificarPalpite()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+
+        var numSecreto = Math.floor(Math.random()*100)+ 1 ;
+
+
+        function verificarPalpite(){
+
+            var palpite = parseInt(document.getElementById('palpite').value);
+            var resultado;
+
+            if(palpite == numSecreto){
+                resultado = "PARABÉNS VC É TOP MESMO EIN";
+            }else if(palpite < numSecreto){
+                resultado = "Opa não foi dessa vez, chuta mais alto!!!!!";
+            }else{
+                resultado = "Opa nããão, chuta mais baixo!!!";
+            }
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

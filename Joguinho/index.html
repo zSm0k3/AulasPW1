@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+
+    <style>
+        #jogo-conteudo{
+            position: relative;
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-image: url('img_de_fundo.png');
+            background-size: cover;
+        }
+
+        #jogador{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            background-image: url('jogador.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 320px;
+            left: 0;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="jogo-conteudo">
+        <div id="jogador">
+
+        </div>
+    </div>
+
+    <script src="jogo.js"></script>
+</body>
+</html>

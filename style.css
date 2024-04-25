@@ -8,3 +8,9 @@ h1{
 p{
     color: white;
 }
+label{
+    color: white;
+}
+input{
+    box-shadow: white;
+}

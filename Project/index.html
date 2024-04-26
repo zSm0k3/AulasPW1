@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="icon" href="telefone1.png">
+    <title>Cadastro de Telefones</title>
+</head>
+<body>
+    
+    <h2>Cadastro de Telefones</h2>
+
+    <div class="container">
+        <form id="cadastroForm">
+            <div class="form-group">
+              <label for="id">ID:</label> 
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-flag"></i>
+                  </div>
+                </div> 
+                <input id="id" name="id" placeholder="Digite seu id aqui" type="text" required="required" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="nome">Nome:</label> 
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-user"></i>
+                  </div>
+                </div> 
+                <input id="nome" name="nome" placeholder="Digite seu nome" type="text" required="required" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone:</label> 
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                </div> 
+                <input id="telefone" name="telefone" placeholder="Digite seu telefone" type="text" required="required" class="form-control">
+              </div>
+            </div> 
+            <div class="form-group">
+              <button name="cadastrar" type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+          </form>          
+    </div>
+</body>
+    <script src="script.js"></script>
+</html>

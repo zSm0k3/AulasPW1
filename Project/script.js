@@ -16,14 +16,19 @@ document.getElementById('cadastroForm').addEventListener("cadastrar", function (
 
     console.log(cadTelefone);
 
-    //Estou verificando se existe alguma coisa que foi inserida no sessionstorage referente a telefones
+    //Estou verificando se existe alguma coisa que foi inserida no sessionStorage referente a telefones
     if(sessionStorage.getItem("telefones")){
-        //Estou recebendo todo o conteúdo que existe na minha sessionstorage referente a telefones
+        //Estou recebendo todo o conteúdo que existe na minha sessionStorage referente a telefones
         var telefoneList = JSON.parse(sessionStorage.getItem("telefones"));
         telefoneList.push(cadTelefone);
         sessionStorage.setItem("telefones", JSON.stringify(telefoneList));
     }else{
+        //Como não existe nenhum elemento, crio um novo
         var novaLista = [cadTelefone]
+        //Envia os dados para o seesionStorage
         sessionStorage.setItem("telefones", JSON.stringify(novaLista));
     }
+
+    //Limpa o formulário
+    document.getElementById("cadastroForm").requestFullscreen();
 });

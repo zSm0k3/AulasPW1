@@ -1,4 +1,4 @@
-document.getElementById('cadastroForm').addEventListener("cadastrar", function (event){
+document.getElementById('cadastroForm').addEventListener("cadastrar", function(event){
 
     event.preventDefault(); //Impede o envio do formulário
 

@@ -22,5 +22,8 @@ document.getElementById('cadastroForm').addEventListener("cadastrar", function (
         var telefoneList = JSON.parse(sessionStorage.getItem("telefones"));
         telefoneList.push(cadTelefone);
         sessionStorage.setItem("telefones", JSON.stringify(telefoneList));
+    }else{
+        var novaLista = [cadTelefone]
+        sessionStorage.setItem("telefones", JSON.stringify(novaLista));
     }
 });

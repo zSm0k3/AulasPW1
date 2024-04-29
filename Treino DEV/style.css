@@ -1,0 +1,37 @@
+h1{
+    text-align: center;
+    font-family: BankGothic Lt BT;
+    color: rgb(4, 4, 4);
+    text-shadow: rgb(103, 100, 100) 3px 3px 3px;
+    font-size: 60px;
+    text-decoration-line:underline;
+    font-style: italic;
+}
+body{
+    background-color: black;
+}
+img{
+    height: 300px;
+}
+.divFundo{
+    background-color: rgb(255, 255, 255);
+    margin: 40px 200px 40px 200px;
+    padding: 3px;
+}
+p{
+    text-align: center;
+    font-family: BankGothic Lt BT;
+    color: rgb(4, 4, 4);
+    text-shadow: rgb(103, 100, 100) 2px 2px 2px;
+    font-size: 40px;
+}
+button{
+    text-align: center;
+    font-size: 40px;
+    background-color: brown;
+    color: white;
+    border: double;
+}
+button:hover{
+    background-color: rgb(23, 23, 23);
+}

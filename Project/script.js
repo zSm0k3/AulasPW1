@@ -1,4 +1,4 @@
-document.getElementById('cadastroForm').addEventListener("cadastrar", function(event){
+document.getElementById('cadastroForm').addEventListener("submit", function(event){
 
     event.preventDefault(); //Impede o envio do formulário
 
@@ -30,5 +30,5 @@ document.getElementById('cadastroForm').addEventListener("cadastrar", function(e
     }
 
     //Limpa o formulário
-    document.getElementById("cadastroForm").requestFullscreen();
+    document.getElementById("cadastroForm").reset();
 });

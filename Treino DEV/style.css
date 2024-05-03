@@ -22,16 +22,26 @@ p{
     text-align: center;
     font-family: BankGothic Lt BT;
     color: rgb(4, 4, 4);
-    text-shadow: rgb(103, 100, 100) 2px 2px 2px;
+    text-shadow: rgb(103, 100, 100) 1px 2px 2px;
     font-size: 40px;
 }
-button{
+#botao{
     text-align: center;
     font-size: 40px;
     background-color: brown;
     color: white;
-    border: double;
+    border-radius: 10px;
 }
-button:hover{
+#botao2{
+    text-align: center;
+    font-size: 40px;
+    background-color: rgb(10, 10, 10);
+    color: white;
+    border-radius: 10px;
+}
+#botao:hover{
     background-color: rgb(131, 34, 34);
+}
+#botao2:hover{
+    background-color: rgb(49, 46, 46);
 }

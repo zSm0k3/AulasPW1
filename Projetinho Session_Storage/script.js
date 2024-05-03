@@ -2,7 +2,7 @@ document.getElementById('cadastroForm').addEventListener("submit", function(even
     
     event.preventDefault();
  
-    var user = document.getElementById("user").value;
+    var id = document.getElementById("id").value;
     var name = document.getElementById("name").value;
     var telefone = document.getElementById("telefone").value;
     var endereco = document.getElementById("endereco").value;
@@ -10,7 +10,7 @@ document.getElementById('cadastroForm').addEventListener("submit", function(even
     var estado = document.getElementById("estado").value;
 
     var cadClientes = {
-        user : user,
+        id : id,
         name : name,
         telefone : telefone,
         endereco : endereco,
@@ -20,14 +20,67 @@ document.getElementById('cadastroForm').addEventListener("submit", function(even
 
     console.log(cadClientes);
 
-    if(sessionStorage.getItem("clientes")){
-        var clientesList = JSON.parse(sessionStorage.getItem("clientes"));
-        clientesList.push(cadClientes);
-        sessionStorage.setItem("clientes", JSON.stringify(clientesList));
-    }else{
-        var novaLista = [cadClientes];
-        sessionStorage.setItem("clientes", JSON.stringify(novaLista));
-    }
+    if (typeof(Storage) !== "undefined") {
+        if(sessionStorage.getItem("clientes")){
+            var clientesList = JSON.parse(sessionStorage.getItem("clientes"));
+            clientesList.push(cadClientes);
+            sessionStorage.setItem("clientes", JSON.stringify(clientesList));
+        }else{
+            var novaLista = [cadClientes];
+            sessionStorage.setItem("clientes", JSON.stringify(novaLista));
+        }
 
-    document.getElementById("cadastroForm").reset();
+        document.getElementById("cadastroForm").reset();
+
+        alert("Cliente cadastrado com sucesso!");
+
+        location.reload();
+    } else {
+        // Se o navegador não suportar sessionStorage, exibe uma mensagem de erro
+        alert("Seu navegador não suporta a sessionStorage. Não é possível salvar os dados.");
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // capturar referencia do conteudo da tabela 
+    var tableBody = document.querySelector("#dataTable tbody");
+
+    //Limpar tabela
+    tableBody.innerHTML = "";
+
+    for (var i = 0; i < sessionStorage.length; i++) {
+        
+        if (sessionStorage.key(i) == "clientes"){
+
+            var key = sessionStorage.key(i);
+            var value = JSON.parse(sessionStorage.getItem(key));
+
+            for(var j = 0; j <= value.length; j++){
+                
+                var objeto = value[j];
+
+                console.log(objeto);
+
+                 // Criar um linha
+                 var newRow = document.createElement("tr");
+                 // criar tres celulas
+                 var idCell = document.createElement("td");
+                 var nameCell = document.createElement("td");
+                 var telefoneCell = document.createElement("td");
+                
+                 idCell.textContent = objeto.id;
+                 nameCell.textContent = objeto.name;
+                 telefoneCell.textContent = objeto.telefone;
+         
+                 // Add dados na linha
+                 newRow.appendChild(idCell);
+                 newRow.appendChild(nameCell);
+                 newRow.appendChild(telefoneCell);
+         
+                 // ADD linha na tabela
+                 tableBody.appendChild(newRow);
+
+            } 
+        }
+    }
 });

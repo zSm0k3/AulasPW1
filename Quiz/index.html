@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="icon" href="interrogacao.png">
+    <title>Quiz</title>
+</head>
+<body>
+    <div id="fundo">
+        <div id="quiz-container">
+            <div id="question"></div>
+            <div align = "center"; style="background-color: black;" id="answers"></div>
+            <button onclick="nextQuestion()">Next</button>
+        </div>
+    </div>
+
+    <div id="results" style="display: none;">
+        <h2>Results</h2>
+        <p>Qtd. Respostas Corretas: <span id="correct"></span></p>
+        <p>Qtd. Respostas Incorretas: <span id="incorrect"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

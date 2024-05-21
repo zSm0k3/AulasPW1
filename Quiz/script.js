@@ -30,6 +30,7 @@ function showQuestion() {
         button.classList.add('answer');
         button.onclick = () => checkAnswer(index);
         answersElement.appendChild(button);
+        answersElement.appendChild(document.createElement('br'));
     });
 }
 
@@ -61,6 +62,7 @@ function nextQuestion() {
 
 function showResults() {
     document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('fundo').style.display = 'none';
     resultsElement.style.display = 'block';
     document.getElementById('correct').textContent = correctAnswers;
     document.getElementById('incorrect').textContent = incorrectAnswers;

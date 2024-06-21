@@ -9,3 +9,7 @@ function bta(){
 function btu(){
     window.location.href = "usuarios.html";
 }
+
+function btc(){
+    window.location.href = "clientes.html";
+}
